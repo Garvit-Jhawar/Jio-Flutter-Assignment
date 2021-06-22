@@ -28,8 +28,19 @@ class CalendarScreen extends StatelessWidget {
               child: TableCalendar(
                   calendarStyle: CalendarStyle(
                     weekendTextStyle: TextStyle(
-                      color: Colors.blue[700],
+                        color: Colors.red,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18),
+                  ),
+                  headerStyle: HeaderStyle(
+                    titleTextStyle: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold,
+                    ),
+                    headerPadding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: Colors.blue[700],
                     ),
                   ),
                   focusedDay: DateTime.now(),

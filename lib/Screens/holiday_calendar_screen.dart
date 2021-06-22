@@ -28,7 +28,7 @@ class HolidayCalendarScreen extends StatelessWidget {
                   style: TextStyle(
                       fontSize: 20,
                       color: Colors.green,
-                      fontWeight: FontWeight.bold),
+                      fontWeight: FontWeight.w400),
                 ),
               ),
               SizedBox(
@@ -47,7 +47,7 @@ class HolidayCalendarScreen extends StatelessWidget {
     return Container(
       padding: EdgeInsets.all(5),
       height: 300,
-      width: 350,
+      width: maxWidth * 0.85,
       child: Card(
           elevation: 20,
           child: SingleChildScrollView(
