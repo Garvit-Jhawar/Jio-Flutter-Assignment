@@ -23,7 +23,7 @@ class ApplyLeaveScreen extends StatelessWidget {
           child: Column(
             children: <Widget>[
               SizedBox(
-                height: 15,
+                height: 30,
               ),
               Container(
                 alignment: Alignment.topLeft,
@@ -34,10 +34,10 @@ class ApplyLeaveScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 8,
+                height: 10,
               ),
               Container(
-                alignment: Alignment.centerLeft,
+                alignment: Alignment.bottomLeft,
                 child: Text(
                   subhead,
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.w300),
@@ -46,7 +46,7 @@ class ApplyLeaveScreen extends StatelessWidget {
               Row(
                 children: [
                   Container(
-                    alignment: Alignment.bottomLeft,
+                    alignment: Alignment.topLeft,
                     child: Text(
                       date,
                       textAlign: TextAlign.right,
@@ -77,7 +77,7 @@ class ApplyLeaveScreen extends StatelessWidget {
     return Container(
       padding: EdgeInsets.all(5),
       height: 350,
-      width: 350,
+      width: maxWidth * 0.85,
       child: Card(
           elevation: 20,
           child: SingleChildScrollView(
@@ -111,7 +111,7 @@ class ApplyLeaveScreen extends StatelessWidget {
                   height: 20,
                 ),
                 Container(
-                  margin: EdgeInsets.only(right: maxWidth - 150),
+                  margin: EdgeInsets.only(right: maxWidth * 0.55),
                   height: maxHeight * 0.05,
                   child: Text(
                     "See More",

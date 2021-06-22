@@ -145,9 +145,9 @@ class _ApplyForLeaveScreenState extends State<ApplyForLeaveScreen> {
                     calendarStyle: CalendarStyle(
                       outsideDaysVisible: false,
                       weekendTextStyle: TextStyle(
-                        color: Colors.blue[700],
-                        fontWeight: FontWeight.bold,
-                      ),
+                          color: Colors.blue[700],
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18),
                     ),
                     focusedDay: DateTime.now(),
                     firstDay: DateTime(2015),
@@ -196,9 +196,11 @@ class _ApplyForLeaveScreenState extends State<ApplyForLeaveScreen> {
                     alignment: Alignment.bottomLeft,
                     margin: EdgeInsets.only(left: 15),
                     child: DropdownButton(
+                      style: TextStyle(color: Colors.blue[700]),
+                      isExpanded: true,
                       icon: Icon(
                         Icons.arrow_drop_down_outlined,
-                        size: 30,
+                        size: 50,
                         color: Colors.blue[700],
                       ),
                       hint: Text(
@@ -228,11 +230,9 @@ class _ApplyForLeaveScreenState extends State<ApplyForLeaveScreen> {
             Row(
               children: [
                 Transform.scale(
-                  scale: 1.3,
+                  scale: 1.5,
                   child: Checkbox(
-                      side: BorderSide(
-                        width: 2,
-                      ),
+                      side: BorderSide(),
                       activeColor: Colors.blue[700],
                       value: checkbox,
                       onChanged: (value) {
@@ -279,9 +279,11 @@ class _ApplyForLeaveScreenState extends State<ApplyForLeaveScreen> {
                     alignment: Alignment.bottomLeft,
                     margin: EdgeInsets.only(left: 15),
                     child: DropdownButton(
+                      isExpanded: true,
+                      style: TextStyle(color: Colors.blue[700]),
                       icon: Icon(
                         Icons.arrow_drop_down_outlined,
-                        size: 30,
+                        size: 50,
                         color: Colors.blue[700],
                       ),
                       hint: Text(
@@ -314,7 +316,7 @@ class _ApplyForLeaveScreenState extends State<ApplyForLeaveScreen> {
               children: <Widget>[
                 Container(
                   padding: EdgeInsets.symmetric(
-                    horizontal: 30,
+                    horizontal: 40,
                   ),
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.blue, width: 2),
@@ -334,7 +336,7 @@ class _ApplyForLeaveScreenState extends State<ApplyForLeaveScreen> {
                 ),
                 Container(
                   padding: EdgeInsets.symmetric(
-                    horizontal: 35,
+                    horizontal: 40,
                   ),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),

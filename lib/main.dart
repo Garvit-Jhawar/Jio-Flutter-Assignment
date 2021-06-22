@@ -37,9 +37,9 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  bool holidayCalendarScreen = false;
-  bool applyLeaveScreen = false;
-  bool calendarScreen = false;
+  var holidayCalendarScreen;
+  var applyLeaveScreen;
+  var calendarScreen;
   @override
   void initState() {
     holidayCalendarScreen = false;
@@ -51,9 +51,8 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
-    final double categoryHeight =
-        MediaQuery.of(context).size.height * 0.30 - 50;
-    // final double categoryWidth = MediaQuery.of(context).size.width * 0.1;
+    final double categoryHeight = MediaQuery.of(context).size.height * 0.22;
+    final double categoryWidth = MediaQuery.of(context).size.width * 0.3;
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -82,7 +81,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: <Widget>[
                     Container(
                       height: categoryHeight,
-                      width: 120,
+                      width: categoryWidth,
                       decoration: BoxDecoration(
                           color: Colors.red,
                           borderRadius:
@@ -120,7 +119,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                     Container(
                       height: categoryHeight,
-                      width: 120,
+                      width: categoryWidth,
                       decoration: BoxDecoration(
                           color: Colors.blue[700],
                           borderRadius:
@@ -133,7 +132,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             Column(
                               children: [
                                 Text(
-                                  "Leave & Regularization History    -",
+                                  "Leave & Regularization History-",
                                   style: TextStyle(
                                       fontSize: 11.5,
                                       color: Colors.white,
@@ -161,7 +160,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                     Container(
                       height: categoryHeight,
-                      width: 120,
+                      width: categoryWidth,
                       decoration: BoxDecoration(
                           color: Colors.blue[700],
                           borderRadius:
@@ -174,14 +173,14 @@ class _MyHomePageState extends State<MyHomePage> {
                             Column(
                               children: [
                                 Text(
-                                  "Time report -            Team -",
+                                  "Time report - Team -",
                                   style: TextStyle(
                                       fontSize: 11.5,
                                       color: Colors.white,
                                       fontWeight: FontWeight.bold),
                                 ),
                                 SizedBox(
-                                  height: 20,
+                                  height: 18,
                                 ),
                                 Container(
                                   alignment: Alignment.bottomRight,
@@ -408,7 +407,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                       fontSize: 20,
                                       fontWeight: FontWeight.bold),
                                 ),
-                                SizedBox(width: 90),
+                                SizedBox(width: 95),
                                 Icon(
                                   Icons.arrow_drop_up_outlined,
                                   color: Colors.white,
@@ -437,7 +436,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                       fontSize: 20,
                                       fontWeight: FontWeight.bold),
                                 ),
-                                SizedBox(width: 90),
+                                SizedBox(width: 95),
                                 Icon(
                                   Icons.arrow_drop_down,
                                   color: Colors.white,
